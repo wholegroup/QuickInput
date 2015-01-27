@@ -1,0 +1,795 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Russian (Russia) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_RUS)
+LANGUAGE LANG_RUSSIAN, SUBLANG_DEFAULT
+#pragma code_page(1251)
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_MAINFRAME           ICON                    "res\\QuickInput.ico"
+IDI_CONFIG              ICON                    "res\\config.ico"
+IDI_INFO                ICON                    "res\\info.ico"
+IDI_PROGRAMS            ICON                    "res\\programs.ico"
+IDI_COLORS              ICON                    "res\\colors.ico"
+IDI_TRAY_256            ICON                    "res\\tray_256.ico"
+IDI_TRAY_32BPP          ICON                    "res\\tray_32bpp.ico"
+IDI_EDITDICT            ICON                    "res\\editdict.ico"
+IDI_IEXPLORE            ICON                    "res\\ie.ico"
+IDI_TRAY_256_GR         ICON                    "res\\tray_256_gr.ico"
+IDI_TRAY_32BPP_GR       ICON                    "res\\tray_32bpp_gr.ico"
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""res\\QuickInput.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""         // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDM_POPUPMENU MENU
+BEGIN
+    POPUP "Трей"
+    BEGIN
+        MENUITEM "Работает",                    ID_TRAY_WORKING
+        MENUITEM SEPARATOR
+        MENUITEM "Настройки",                   ID_TRAY_OPTION
+        MENUITEM "Внешний вид",                 ID_TRAY_COLORS
+        MENUITEM "Выбор программ",              ID_TRAY_PROGRAMS
+        MENUITEM "Редактирование словаря",      ID_TRAY_EDITDICT
+        MENUITEM "О Quick Input...",            ID_TRAY_ABOUT
+        MENUITEM SEPARATOR
+        MENUITEM "Закрыть программу",           ID_TRAY_CLOSE
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_QUICKINPUT_DIALOG DIALOGEX 0, 0, 320, 175
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | DS_CENTER | WS_POPUP | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "Quick Input"
+FONT 8, "MS Shell Dlg", 400, 0, 0xCC
+BEGIN
+    PUSHBUTTON      "Тест",IDB_TESTFEAUTURE,87,160,64,14
+    PUSHBUTTON      "OK",IDOK,205,160,50,14
+    PUSHBUTTON      "Отмена",IDCANCEL,265,160,50,14
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKFRAME | SS_SUNKEN,89,25,226,1
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKFRAME | SS_SUNKEN,90,155,224,1
+    CONTROL         "",IDC_DIALOGNAME,"Static",SS_BLACKRECT,89,3,226,19,WS_EX_TRANSPARENT
+    CONTROL         "",IDC_DIALOGVIEW,"Static",SS_BLACKRECT,89,29,226,124
+    LISTBOX         IDC_DIALOGLIST,2,3,81,170,LBS_OWNERDRAWVARIABLE | LBS_HASSTRINGS | LBS_USETABSTOPS | LBS_NOINTEGRALHEIGHT | NOT WS_BORDER | WS_VSCROLL | WS_TABSTOP,WS_EX_CLIENTEDGE
+END
+
+IDD_ABOUT DIALOGEX 0, 0, 231, 138
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD
+EXSTYLE WS_EX_WINDOWEDGE
+FONT 8, "MS Shell Dlg", 400, 0, 0xCC
+BEGIN
+    CTEXT           "Программа Quick Input предназначена для ускоренного ввода часто повторяющихся слов в различных программах, где такая возможность не была предусмотрена разработчиками.",IDC_STATIC,105,7,120,52
+    CONTROL         IDI_TRAY_32BPP,IDC_STATIC,"Static",SS_BITMAP,8,7,85,94
+    CONTROL         "Домашняя страница (http://ru.qinput.com)",IDC_HL_HOMEPAGE,
+                    "Button",BS_OWNERDRAW | WS_TABSTOP,36,107,168,11
+    ICON            IDI_IEXPLORE,IDC_STATIC,9,103,20,20
+END
+
+IDD_OPTIONS DIALOGEX 0, 0, 233, 132
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD
+FONT 8, "MS Shell Dlg", 400, 0, 0xCC
+BEGIN
+    COMBOBOX        IDC_CBLANGUAGES,153,10,66,83,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    CONTROL         "Запускать при старте Windows",IDC_CHECKRUNSTART,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,0,3,121,10
+    CONTROL         "Скрывать этот диалог при запуске",IDC_CHECKRUNMIN,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,0,16,145,10
+    GROUPBOX        "Язык:",IDC_STATIC,147,0,77,27
+    LTEXT           "минимальная длина слова (количество символов)",IDC_STATIC,1,67,172,8
+    COMBOBOX        IDC_CBMINLETTER,175,65,22,105,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    CONTROL         "Дополнять пробелом слово после вставки",IDC_CHECKINSSPACE,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,0,29,159,10
+    CONTROL         "Автоматически заносить в словарь вводимые слова",IDC_CHECKAUTOADD,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,0,55,210,10
+    CONTROL         "Перемещаться по списку слов с помощью пробела",IDC_CHECKSPACEDOWN,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,0,42,187,10
+    COMBOBOX        IDC_CBLETTERSSHOW,117,107,22,105,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Выводить список слов начиная с ",IDC_STATIC,2,109,115,8
+    LTEXT           "буквы",IDC_STATIC,143,109,27,9
+    CONTROL         "",IDC_HOTKEYADD,"msctls_hotkey32",WS_BORDER | WS_TABSTOP,73,90,80,14
+    CONTROL         "Сохранять выделенное слово в словарь по нажатию",IDC_CHECKHOTKEYADD,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,0,80,233,10
+    LTEXT           "комбинации клавиш",IDC_STATIC,1,92,68,8
+END
+
+IDD_COLORS DIALOGEX 0, 0, 230, 131
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD
+FONT 8, "MS Shell Dlg", 400, 0, 0xCC
+BEGIN
+    PUSHBUTTON      "Шрифт",IDB_CHANGEFONT,7,11,46,14
+    LTEXT           "Пример:",IDC_STATIC,128,0,28,8
+    PUSHBUTTON      "Цвет фона",IDB_CHANGEBACKGROUND,7,45,61,14
+    PUSHBUTTON      "Цвет полоски",IDB_CHANGECOLORSELECT,7,63,61,14
+    CONTROL         "",IDC_TESTLIST,"Static",SS_OWNERDRAW | SS_CENTERIMAGE | SS_REALSIZEIMAGE,128,10,98,108
+    GROUPBOX        "Прозрачность окна",IDC_STATIC,0,86,124,32
+    CONTROL         "",IDC_SLIDER_TRANSPARENT,"msctls_trackbar32",TBS_BOTH | TBS_NOTICKS | WS_TABSTOP,4,96,117,10
+    LTEXT           "Текущая:",IDC_STATIC,7,106,34,8
+    LTEXT           "100%",IDC_STATIC_TRANSPARENT,43,106,26,8
+    CONTROL         "",IDC_STATICSELECTCOLOR,"Static",SS_GRAYRECT | NOT WS_VISIBLE,74,63,43,14
+    CONTROL         "",IDC_STATICBGCOLOR,"Static",SS_GRAYRECT | NOT WS_VISIBLE,74,45,43,14
+    GROUPBOX        "Выбор цветов",IDC_STATIC,0,34,124,49
+    CTEXT           "Шрифт",IDC_STATICFONT,58,7,62,21,SS_CENTERIMAGE,WS_EX_CLIENTEDGE
+    GROUPBOX        "Выбор шрифта",IDC_STATIC,0,0,124,31
+END
+
+IDD_PROGRAMS DIALOGEX 0, 0, 233, 124
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD
+FONT 8, "MS Shell Dlg", 400, 0, 0xCC
+BEGIN
+    LISTBOX         IDC_CHOSENPROGRAMS,129,10,96,94,LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_HSCROLL | WS_TABSTOP
+    LTEXT           "Запущенные:",IDC_STATIC,1,0,47,8
+    LTEXT           "Выбранные:",IDC_STATIC,130,0,42,8
+    PUSHBUTTON      ">",IDB_PROGRAMS_ADD,103,23,21,14
+    PUSHBUTTON      ">>",IDB_PROGRAMS_ADDALL,103,40,21,14
+    PUSHBUTTON      "<",IDB_PROGRAMS_REMOVE,103,65,21,14
+    PUSHBUTTON      "<<",IDB_PROGRAMS_REMOVEALL,103,83,21,14
+    LTEXT           "Работать в ",IDC_STATIC,22,111,41,8
+    CONTROL         "НЕ выбранных",IDC_CHOSENNOTWORK,"Button",BS_AUTORADIOBUTTON,64,111,65,10
+    CONTROL         "ТОЛЬКО выбранных",IDC_CHOSENWORK,"Button",BS_AUTORADIOBUTTON,130,111,85,10
+    CONTROL         "",IDC_TREERUNNING,"SysTreeView32",TVS_SHOWSELALWAYS | WS_BORDER | WS_TABSTOP,0,10,98,95
+END
+
+IDD_EDITDICT DIALOGEX 0, 0, 231, 138
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD
+EXSTYLE WS_EX_WINDOWEDGE
+FONT 8, "MS Shell Dlg", 400, 0, 0xCC
+BEGIN
+    EDITTEXT        IDC_EDITSEARCHWORD,0,0,171,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "Искать",IDB_SEARCHWORD,176,0,50,14,NOT WS_VISIBLE
+    LISTBOX         IDC_LISTWORDS,0,16,171,99,LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "Добавить",IDB_ADDWORD,176,16,50,14
+    PUSHBUTTON      "Изменить",IDB_EDITWORD,176,32,50,14
+    PUSHBUTTON      "Удалить",IDB_DELWORD,176,48,50,14
+    PUSHBUTTON      "Загрузить",IDB_IMPORTDICT,176,85,50,14
+    PUSHBUTTON      "Сохранить",IDB_EXPORTDICT,176,101,50,14
+    LTEXT           "Статистика по словарю",IDC_STATICINFODICT,0,116,224,8
+END
+
+IDD_ADDWORD DIALOGEX 0, 0, 186, 50
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Добавить слово в справочник"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_ADDWORD_WORD,2,13,182,14,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "OK",IDOK,81,32,50,14
+    PUSHBUTTON      "Отмена",IDCANCEL,134,32,50,14
+    LTEXT           "Слово или словосочетание:",IDC_STATIC,3,3,95,8
+END
+
+IDD_EDITWORD DIALOGEX 0, 0, 186, 50
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Редактировать слово в справочнике"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_EDITWORD_WORD,2,13,182,14,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "OK",IDOK,81,32,50,14
+    PUSHBUTTON      "Отмена",IDCANCEL,134,32,50,14
+    LTEXT           "Слово или словосочетание:",IDC_STATIC,3,3,95,8
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO
+BEGIN
+    IDD_QUICKINPUT_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 4
+        RIGHTMARGIN, 315
+        TOPMARGIN, 3
+        BOTTOMMARGIN, 170
+    END
+
+    IDD_ABOUT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 224
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 131
+    END
+
+    IDD_OPTIONS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 226
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 125
+    END
+
+    IDD_COLORS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 223
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 124
+    END
+
+    IDD_EDITDICT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 224
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 131
+    END
+
+    IDD_ADDWORD, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 179
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 43
+    END
+
+    IDD_EDITWORD, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 179
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 43
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_BITMAPLOGO          BITMAP                  "res\\logo.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog Info
+//
+
+IDD_OPTIONS DLGINIT
+BEGIN
+    IDC_CBMINLETTER, 0x403, 2, 0
+0x0031, 
+    IDC_CBMINLETTER, 0x403, 2, 0
+0x0032, 
+    IDC_CBMINLETTER, 0x403, 2, 0
+0x0033, 
+    IDC_CBMINLETTER, 0x403, 2, 0
+0x0034, 
+    IDC_CBMINLETTER, 0x403, 2, 0
+0x0035, 
+    IDC_CBMINLETTER, 0x403, 2, 0
+0x0036, 
+    IDC_CBMINLETTER, 0x403, 2, 0
+0x0037, 
+    IDC_CBMINLETTER, 0x403, 2, 0
+0x0038, 
+    IDC_CBMINLETTER, 0x403, 2, 0
+0x0039, 
+    IDC_CBLETTERSSHOW, 0x403, 2, 0
+0x0031, 
+    IDC_CBLETTERSSHOW, 0x403, 2, 0
+0x0032, 
+    IDC_CBLETTERSSHOW, 0x403, 2, 0
+0x0033, 
+    IDC_CBLETTERSSHOW, 0x403, 2, 0
+0x0034, 
+    IDC_CBLETTERSSHOW, 0x403, 2, 0
+0x0035, 
+    IDC_CBLETTERSSHOW, 0x403, 2, 0
+0x0036, 
+    IDC_CBLETTERSSHOW, 0x403, 2, 0
+0x0037, 
+    IDC_CBLETTERSSHOW, 0x403, 2, 0
+0x0038, 
+    IDC_CBLETTERSSHOW, 0x403, 2, 0
+0x0039, 
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE
+BEGIN
+    IDS_DLG_CAPTION_OPTIONS "Диалог настроек"
+    IDS_DLG_CAPTION_ABOUT   "О Quick Input"
+    IDS_DLG_LIST_OPTIONS    "Настройки"
+    IDS_DLG_LIST_ABOUT      " О Quick Input"
+    IDS_TESTLIST_1          "Январь"
+    IDS_TESTLIST_2          "Февраль"
+    IDS_TESTLIST_3          "Март"
+    IDS_TESTLIST_4          "Апрель"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_TESTLIST_5          "Май"
+    IDS_TESTLIST_6          "Июнь"
+    IDS_TESTLIST_7          "Июль"
+    IDS_TESTLIST_8          "Август"
+    IDS_TESTLIST_9          "Сентябрь"
+    IDS_TESTLIST_10         "Октябрь"
+    IDS_TESTLIST_11         "Ноябрь"
+    IDS_TESTLIST_12         "Декабрь"
+    IDS_DLG_CAPTION_COLORS  "Внешний вид списка"
+    IDS_DLG_LIST_COLORS     "Внешний вид"
+    IDS_DLG_CAPTION_PROGRAMS "Выбор программ"
+    IDS_DLG_LIST_PROGRAMS   "Программы"
+    IDS_DLG_CAPTION_EDITDICT "Редактирование словаря"
+    IDS_DLG_LIST_EDITDICT   "Словарь"
+    IDS_DLGEDITDICT_DELETEWORD "Вы уверены, что хотите удалить эту запись ?"
+    IDS_DLGEDITDICT_ERRORREAD "Формат файла неверный"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_DLGABOUT_HOMEPAGE   "http://ru.qinput.com"
+    IDS_DLGEDITDICT_INFODICT "Показано слов: %d, Всего слов: %d"
+    IDS_BALLOONTIP_ADD      "ДОБАВЛЕНО: "
+END
+
+#endif    // Russian (Russia) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// English (United States) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDM_POPUPMENU MENU
+BEGIN
+    POPUP "????"
+    BEGIN
+        MENUITEM "Working",                     ID_TRAY_WORKING
+        MENUITEM SEPARATOR
+        MENUITEM "Settings",                    ID_TRAY_OPTION
+        MENUITEM "Appearance window",           ID_TRAY_COLORS
+        MENUITEM "Choice Program",              ID_TRAY_PROGRAMS
+        MENUITEM "Edit Dictionary",             ID_TRAY_EDITDICT
+        MENUITEM "About Quick Input",           ID_TRAY_ABOUT
+        MENUITEM SEPARATOR
+        MENUITEM "Exit",                        ID_TRAY_CLOSE
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_QUICKINPUT_DIALOG DIALOGEX 0, 0, 320, 175
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | DS_CENTER | WS_POPUP | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "Quick Input"
+FONT 8, "MS Shell Dlg", 400, 0, 0xCC
+BEGIN
+    PUSHBUTTON      "Test",IDB_TESTFEAUTURE,87,160,64,14
+    PUSHBUTTON      "OK",IDOK,205,160,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,265,160,50,14
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKFRAME | SS_SUNKEN,89,25,226,1
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKFRAME | SS_SUNKEN,90,155,224,1
+    CONTROL         "",IDC_DIALOGNAME,"Static",SS_BLACKRECT,89,3,226,19,WS_EX_TRANSPARENT
+    CONTROL         "",IDC_DIALOGVIEW,"Static",SS_BLACKRECT,89,29,226,124
+    LISTBOX         IDC_DIALOGLIST,2,3,81,170,LBS_OWNERDRAWVARIABLE | LBS_HASSTRINGS | LBS_USETABSTOPS | LBS_NOINTEGRALHEIGHT | NOT WS_BORDER | WS_VSCROLL | WS_TABSTOP,WS_EX_CLIENTEDGE
+END
+
+IDD_PROGRAMS DIALOGEX 0, 0, 233, 124
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD
+FONT 8, "MS Shell Dlg", 400, 0, 0xCC
+BEGIN
+    LISTBOX         IDC_CHOSENPROGRAMS,129,10,96,94,LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_HSCROLL | WS_TABSTOP
+    LTEXT           "Runnings:",IDC_STATIC,1,0,33,8
+    LTEXT           "Selected:",IDC_STATIC,130,0,31,8
+    PUSHBUTTON      ">",IDB_PROGRAMS_ADD,103,23,21,14
+    PUSHBUTTON      ">>",IDB_PROGRAMS_ADDALL,103,40,21,14
+    PUSHBUTTON      "<",IDB_PROGRAMS_REMOVE,103,65,21,14
+    PUSHBUTTON      "<<",IDB_PROGRAMS_REMOVEALL,103,83,21,14
+    LTEXT           "Work in",IDC_STATIC,93,110,25,8
+    CONTROL         "not selected",IDC_CHOSENNOTWORK,"Button",BS_AUTORADIOBUTTON,120,111,51,8
+    CONTROL         "only selected",IDC_CHOSENWORK,"Button",BS_AUTORADIOBUTTON,172,111,53,8
+    CONTROL         "",IDC_TREERUNNING,"SysTreeView32",TVS_SHOWSELALWAYS | WS_BORDER | WS_HSCROLL | WS_TABSTOP,0,10,98,95
+END
+
+IDD_OPTIONS DIALOGEX 0, 0, 233, 151
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD
+FONT 8, "MS Shell Dlg", 400, 0, 0xCC
+BEGIN
+    COMBOBOX        IDC_CBLANGUAGES,153,10,66,83,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    CONTROL         "Run on Windows startup",IDC_CHECKRUNSTART,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,0,3,95,10
+    CONTROL         "Start minimized in the system tray",IDC_CHECKRUNMIN,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,0,16,145,10
+    GROUPBOX        "Language:",IDC_STATIC,147,0,77,27
+    LTEXT           "Minimum word length (number of letter)",IDC_STATIC,2,67,172,8
+    COMBOBOX        IDC_CBMINLETTER,132,65,22,105,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    CONTROL         "Add space after word insert ",IDC_CHECKINSSPACE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,0,29,107,10
+    CONTROL         "Automatically to add in the dictionary entered words",IDC_CHECKAUTOADD,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,0,55,210,10
+    CONTROL         "To move list of words by space button",IDC_CHECKSPACEDOWN,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,0,42,138,10
+    COMBOBOX        IDC_CBLETTERSSHOW,79,107,22,105,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Show list of word since ",IDC_STATIC,2,109,75,8
+    LTEXT           "letters",IDC_STATIC,106,109,27,9
+    CONTROL         "",IDC_HOTKEYADD,"msctls_hotkey32",WS_BORDER | WS_TABSTOP,29,90,80,14
+    CONTROL         "Adding the selected word in a dictionary on pressing",IDC_CHECKHOTKEYADD,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,0,80,233,10
+    LTEXT           "hot key",IDC_STATIC,1,92,25,8
+END
+
+IDD_EDITWORD DIALOGEX 0, 0, 186, 50
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Edit word in dictionary"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_EDITWORD_WORD,2,13,182,14,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "OK",IDOK,81,32,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,134,32,50,14
+    LTEXT           "Word or word-combination:",IDC_STATIC,3,3,88,8
+END
+
+IDD_EDITDICT DIALOGEX 0, 0, 231, 138
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD
+EXSTYLE WS_EX_WINDOWEDGE
+FONT 8, "MS Shell Dlg", 400, 0, 0xCC
+BEGIN
+    EDITTEXT        IDC_EDITSEARCHWORD,0,0,171,14,ES_AUTOHSCROLL
+    LISTBOX         IDC_LISTWORDS,0,16,171,99,LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "Add",IDB_ADDWORD,176,16,50,14
+    PUSHBUTTON      "Edit",IDB_EDITWORD,176,32,50,14
+    PUSHBUTTON      "Delete",IDB_DELWORD,176,48,50,14
+    PUSHBUTTON      "Import",IDB_IMPORTDICT,176,85,50,14
+    PUSHBUTTON      "Export",IDB_EXPORTDICT,176,101,50,14
+    LTEXT           "?????????? ?? ???????",IDC_STATICINFODICT,0,116,224,8
+END
+
+IDD_COLORS DIALOGEX 0, 0, 230, 136
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD
+FONT 8, "MS Shell Dlg", 400, 0, 0xCC
+BEGIN
+    PUSHBUTTON      "Font",IDB_CHANGEFONT,7,11,46,14
+    LTEXT           "Sample:",IDC_STATIC,128,0,26,8
+    PUSHBUTTON      "Background",IDB_CHANGEBACKGROUND,7,45,61,14
+    PUSHBUTTON      "Chosen",IDB_CHANGECOLORSELECT,7,63,61,14
+    CONTROL         "",IDC_TESTLIST,"Static",SS_OWNERDRAW | SS_CENTERIMAGE | SS_REALSIZEIMAGE,128,10,98,108
+    GROUPBOX        "Opacity",IDC_STATIC,0,86,124,32
+    CONTROL         "",IDC_SLIDER_TRANSPARENT,"msctls_trackbar32",TBS_BOTH | TBS_NOTICKS | WS_TABSTOP,4,96,117,10
+    LTEXT           "Percent:",IDC_STATIC,7,106,28,8
+    LTEXT           "100%",IDC_STATIC_TRANSPARENT,37,106,26,8
+    CONTROL         "",IDC_STATICSELECTCOLOR,"Static",SS_GRAYRECT | NOT WS_VISIBLE,74,63,43,14
+    CONTROL         "",IDC_STATICBGCOLOR,"Static",SS_GRAYRECT | NOT WS_VISIBLE,74,45,43,14
+    GROUPBOX        "Choice of colors",IDC_STATIC,0,34,124,49
+    CTEXT           "Font",IDC_STATICFONT,58,7,62,21,SS_CENTERIMAGE,WS_EX_CLIENTEDGE
+    GROUPBOX        "Choice of fonts",IDC_STATIC,0,0,124,31
+END
+
+IDD_ADDWORD DIALOGEX 0, 0, 186, 50
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Add word to the dictionary"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_ADDWORD_WORD,2,13,182,14,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "OK",IDOK,81,32,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,134,32,50,14
+    LTEXT           "Word or word combination:",IDC_STATIC,3,3,88,8
+END
+
+IDD_ABOUT DIALOGEX 0, 0, 231, 138
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD
+EXSTYLE WS_EX_WINDOWEDGE
+FONT 8, "MS Shell Dlg", 400, 0, 0xCC
+BEGIN
+    CTEXT           "The Quick Input software is designed for a quick input of frequently met words in different programs in cases when the program developer doesn't provide this kind of service.",IDC_STATIC,105,7,120,52
+    CONTROL         IDI_TRAY_32BPP,IDC_STATIC,"Static",SS_BITMAP,8,7,85,94
+    CONTROL         "Go to home page (http://en.qinput.com)",IDC_HL_HOMEPAGE,
+                    "Button",BS_OWNERDRAW | WS_TABSTOP,36,107,154,11
+    ICON            IDI_IEXPLORE,IDC_STATIC,9,103,20,20
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO
+BEGIN
+    IDD_QUICKINPUT_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 4
+        RIGHTMARGIN, 315
+        TOPMARGIN, 3
+        BOTTOMMARGIN, 170
+    END
+
+    IDD_PROGRAMS, DIALOG
+    BEGIN
+    END
+
+    IDD_OPTIONS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 226
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 144
+    END
+
+    IDD_EDITWORD, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 179
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 43
+    END
+
+    IDD_EDITDICT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 224
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 131
+    END
+
+    IDD_COLORS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 223
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 129
+    END
+
+    IDD_ADDWORD, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 179
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 43
+    END
+
+    IDD_ABOUT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 224
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 131
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog Info
+//
+
+IDD_OPTIONS DLGINIT
+BEGIN
+    IDC_CBMINLETTER, 0x403, 2, 0
+0x0031, 
+    IDC_CBMINLETTER, 0x403, 2, 0
+0x0032, 
+    IDC_CBMINLETTER, 0x403, 2, 0
+0x0033, 
+    IDC_CBMINLETTER, 0x403, 2, 0
+0x0034, 
+    IDC_CBMINLETTER, 0x403, 2, 0
+0x0035, 
+    IDC_CBMINLETTER, 0x403, 2, 0
+0x0036, 
+    IDC_CBMINLETTER, 0x403, 2, 0
+0x0037, 
+    IDC_CBMINLETTER, 0x403, 2, 0
+0x0038, 
+    IDC_CBMINLETTER, 0x403, 2, 0
+0x0039, 
+    IDC_CBLETTERSSHOW, 0x403, 2, 0
+0x0031, 
+    IDC_CBLETTERSSHOW, 0x403, 2, 0
+0x0032, 
+    IDC_CBLETTERSSHOW, 0x403, 2, 0
+0x0033, 
+    IDC_CBLETTERSSHOW, 0x403, 2, 0
+0x0034, 
+    IDC_CBLETTERSSHOW, 0x403, 2, 0
+0x0035, 
+    IDC_CBLETTERSSHOW, 0x403, 2, 0
+0x0036, 
+    IDC_CBLETTERSSHOW, 0x403, 2, 0
+0x0037, 
+    IDC_CBLETTERSSHOW, 0x403, 2, 0
+0x0038, 
+    IDC_CBLETTERSSHOW, 0x403, 2, 0
+0x0039, 
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 0,7,0,1
+ PRODUCTVERSION 0,7,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904b0"
+        BEGIN
+            VALUE "Comments", "www.qinput.com"
+            VALUE "CompanyName", "Whole Group (www.wholegroup.com)"
+            VALUE "FileDescription", "Quick Input"
+            VALUE "FileVersion", "0, 7, 0, 1"
+            VALUE "InternalName", "Quick Input"
+            VALUE "LegalCopyright", "Copyright (C) 2007 Whole Group"
+            VALUE "OriginalFilename", "QuickInput.exe"
+            VALUE "ProductName", "Quick Input"
+            VALUE "ProductVersion", "0, 7, 0, 1"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE
+BEGIN
+    IDS_DLG_CAPTION_OPTIONS "Settings dialog"
+    IDS_DLG_CAPTION_ABOUT   "About Quick Input"
+    IDS_DLG_LIST_OPTIONS    "Settings"
+    IDS_DLG_LIST_ABOUT      "About"
+    IDS_TESTLIST_1          "January"
+    IDS_TESTLIST_2          "February"
+    IDS_TESTLIST_3          "March"
+    IDS_TESTLIST_4          "April"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_TESTLIST_5          "May"
+    IDS_TESTLIST_6          "June"
+    IDS_TESTLIST_7          "July"
+    IDS_TESTLIST_8          "August"
+    IDS_TESTLIST_9          "September"
+    IDS_TESTLIST_10         "October"
+    IDS_TESTLIST_11         "November"
+    IDS_TESTLIST_12         "December"
+    IDS_DLG_CAPTION_COLORS  "Appearance window"
+    IDS_DLG_LIST_COLORS     "Appearance"
+    IDS_DLG_CAPTION_PROGRAMS "Choice Program"
+    IDS_DLG_LIST_PROGRAMS   "Programs"
+    IDS_DLG_CAPTION_EDITDICT "Edit Dictionary"
+    IDS_DLG_LIST_EDITDICT   "Dictionary"
+    IDS_DLGEDITDICT_DELETEWORD "Are you sure you want to delete this?"
+    IDS_DLGEDITDICT_ERRORREAD "Unknow File Format"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_DLGABOUT_HOMEPAGE   "http://en.qinput.com"
+    IDS_DLGEDITDICT_INFODICT "Visible words: %d, Total words: %d"
+    IDS_BALLOONTIP_ADD      "ADDED:  "
+END
+
+#endif    // English (United States) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#endif //_WIN32
+#include "res\QuickInput.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"         // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

@@ -1,0 +1,122 @@
+//{{NO_DEPENDENCIES}}
+// Microsoft Visual C++ generated include file.
+// Used by QuickInput.rc
+//
+#define IDD_QUICKINPUT_DIALOG           102
+#define IDM_POPUPMENU                   129
+#define IDI_MAINFRAME                   131
+#define IDI_CONFIG                      132
+#define IDI_INFO                        133
+#define IDD_ABOUT                       134
+#define IDD_OPTIONS                     135
+#define IDS_DLG_CAPTION_OPTIONS         136
+#define IDS_DLG_CAPTION_ABOUT           137
+#define IDS_DLG_LIST_OPTIONS            138
+#define IDI_PROGRAMS                    138
+#define IDS_DLG_LIST_ABOUT              139
+#define IDI_COLORS                      139
+#define IDD_COLORS                      140
+#define IDS_TESTLIST_1                  140
+#define IDS_TESTLIST_2                  141
+#define IDD_PROGRAMS                    141
+#define IDS_TESTLIST_3                  142
+#define IDD_EDITDICT                    142
+#define IDS_TESTLIST_4                  143
+#define IDS_TESTLIST_5                  144
+#define IDI_TRAY_256                    144
+#define IDS_TESTLIST_6                  145
+#define IDB_BITMAPLOGO                  145
+#define IDI_TRAY_32BPP                  145
+#define IDS_TESTLIST_7                  146
+#define IDS_TESTLIST_8                  147
+#define IDS_TESTLIST_9                  148
+#define IDD_ADDWORD                     148
+#define IDS_TESTLIST_10                 149
+#define IDD_EDITWORD                    149
+#define IDS_TESTLIST_11                 150
+#define IDS_TESTLIST_12                 151
+#define IDS_DLG_CAPTION_COLORS          152
+#define IDS_DLG_LIST_COLORS             153
+#define IDS_DLG_CAPTION_PROGRAMS        154
+#define IDS_DLG_LIST_PROGRAMS           155
+#define IDS_DLG_CAPTION_EDITDICT        156
+#define IDS_DLG_LIST_EDITDICT           157
+#define IDS_DLGEDITDICT_DELETEWORD      158
+#define IDS_DLGEDITDICT_ERRORREAD       159
+#define IDI_EDITDICT                    160
+#define IDI_IEXPLORE                    161
+#define IDI_TRAY_256_GR                 162
+#define IDS_DLGABOUT_HOMEPAGE           164
+#define IDD_QUICKINPUT_DIALOG1          164
+#define IDS_DLGEDITDICT_INFODICT        168
+#define IDS_BALLOONTIP_ADD              169
+#define IDI_TRAY_32BPP_GR               170
+#define IDB_TESTFEAUTURE                1000
+#define IDC_DIALOGNAME                  1011
+#define IDC_DIALOGLIST                  1014
+#define IDC_DIALOGVIEW                  1015
+#define IDB_CHANGEBACKGROUND            1019
+#define IDB_CHANGECOLORSELECT           1020
+#define IDB_CHANGEFONT                  1021
+#define IDC_TESTLIST                    1022
+#define IDC_SLIDER_TRANSPARENT          1023
+#define IDC_STATIC_TRANSPARENT          1024
+#define IDC_STATICSELECTCOLOR           1025
+#define IDC_STATICBGCOLOR               1026
+#define IDC_STATICFONT                  1027
+#define IDC_RUNNINGPROGRAMS             1028
+#define IDC_CHOSENPROGRAMS              1029
+#define IDB_PROGRAMS_ADD                1031
+#define IDB_PROGRAMS_ADDALL             1032
+#define IDB_PROGRAMS_REMOVE             1033
+#define IDB_PROGRAMS_REMOVEALL          1034
+#define IDC_CHOSENNOTWORK               1037
+#define IDC_CHOSENWORK                  1038
+#define IDC_HL_HOMEPAGE                 1039
+#define IDC_COMBO1                      1040
+#define IDC_CBLANGUAGES                 1040
+#define IDC_CHECKRUNSTART               1041
+#define IDC_CHECKRUNMIN                 1042
+#define IDC_CBMINLETTER                 1044
+#define IDC_CHECKINSSPACE               1045
+#define IDC_TREERUNNING                 1046
+#define IDC_CBLETTERSSHOW               1046
+#define IDC_EDITSEARCHWORD              1047
+#define IDB_SEARCHWORD                  1048
+#define IDC_LISTWORDS                   1049
+#define IDB_ADDWORD                     1050
+#define IDB_EDITWORD                    1051
+#define IDB_DELWORD                     1052
+#define IDB_IMPORTDICT                  1053
+#define IDB_EXPORTDICT                  1054
+#define IDC_ADDWORD_WORD                1055
+#define IDC_EDITWORD_WORD               1056
+#define IDC_CHECKAUTOADD                1057
+#define IDC_CHECKSPACEDOWN              1058
+#define IDC_STATICINFODICT              1067
+#define IDC_HOTKEYADD                   1068
+#define IDC_CHECKHOTKEYADD              1069
+#define ID_TRAY_CLOSE                   32771
+#define ID_TRAY_ABOUT                   32773
+#define ID_TRAY_OPTION                  32774
+#define ID_32775                        32775
+#define ID_32776                        32776
+#define ID_TRAY_COLORS                  32777
+#define ID_TRAY_PROGRAMS                32778
+#define ID_32779                        32779
+#define ID_TRAY_EDITDICT                32780
+#define ID_32781                        32781
+#define ID_32782                        32782
+#define ID_32783                        32783
+#define ID_TRAY_WORKING                 32784
+
+// Next default values for new objects
+// 
+#ifdef APSTUDIO_INVOKED
+#ifndef APSTUDIO_READONLY_SYMBOLS
+#define _APS_NEXT_RESOURCE_VALUE        170
+#define _APS_NEXT_COMMAND_VALUE         32785
+#define _APS_NEXT_CONTROL_VALUE         1070
+#define _APS_NEXT_SYMED_VALUE           101
+#endif
+#endif
